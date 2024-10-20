@@ -1,0 +1,190 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation Bar */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  /* Landing Page */
+  .landing-page {
+    height: 100vh;
+    background: url('/pics/pic.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .landing-page .content {
+    max-width: 600px;
+  }
+  
+  .landing-page button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .landing-page button:hover {
+    background-color: #555;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Works Section */
+  .works {
+    padding: 50px 20px;
+    background-color: #eee;
+  }
+  
+  .works h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .work-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact form label {
+    margin-bottom: 5px;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact form button:hover {
+    background-color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-active .nav-links {
+      display: block;
+      position: absolute;
+      background-color: #333;
+      right: 0;
+      top: 50px;
+      width: 100%;
+      text-align: right;
+    }
+  
+    .nav-links li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  

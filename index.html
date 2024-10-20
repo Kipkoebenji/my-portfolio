@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="icon" href="/pics/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Recent Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Landing Section -->
+  <section id="landing" class="landing-page">
+    <div class="content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Front-end Developer | Creating Awesome Web Experiences</p>
+      <button onclick="hireMe()">Hire Me</button>
+      <button onclick="explore()">Explore My Work</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate front-end developer with experience in building responsive and interactive web applications. Let's create something amazing together!</p>
+  </section>
+
+  <!-- Recent Works Section -->
+  <section id="works" class="works">
+    <h2>Recent Works</h2>
+    <div class="work-item">
+      <h3>Project 1</h3>
+      <p>I built my own Portfolio from scratch</p>
+    </div>
+    <div class="work-item">
+      <h3>Project 2</h3>
+      <p>Did an e-commerce website</p>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
