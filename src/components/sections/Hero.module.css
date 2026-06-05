@@ -1,0 +1,148 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background: #8a9090;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Photo */
+.photoWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.photoPlaceholder {
+  width: 420px;
+  height: 85%;
+  background: linear-gradient(
+    180deg,
+    rgba(100, 110, 110, 0.4) 0%,
+    rgba(60, 70, 70, 0.6) 100%
+  );
+  border-radius: 4px 4px 0 0;
+  /* Replace this with actual <Image> component */
+}
+
+/* Location badge */
+.locationBadge {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-dark);
+  border-radius: 60px;
+  padding: 16px 12px 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.locationText {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.globeIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Role block */
+.role {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-10%);
+  text-align: left;
+  z-index: 10;
+}
+
+.roleArrow {
+  display: block;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.role p {
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* Scrolling name marquee */
+.marqueeContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.marqueeTrack {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 18s linear infinite;
+  will-change: transform;
+}
+
+.marqueeName,
+.marqueeNameDupe {
+  font-size: clamp(80px, 12vw, 160px);
+  font-weight: 500;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.marqueeSpace {
+  font-size: clamp(80px, 12vw, 160px);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .locationBadge {
+    left: 16px;
+  }
+  .role {
+    right: 72px;
+    top: 32px;
+    transform: none;
+  }
+  .role p {
+    font-size: 18px;
+  }
+  .photoPlaceholder {
+    width: 280px;
+  }
+}

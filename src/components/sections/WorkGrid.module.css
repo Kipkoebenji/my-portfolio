@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--bg-white);
+  padding: 0 0 80px;
+}
+
+.gridItem {
+  aspect-ratio: 16 / 10;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gridItem:hover {
+  transform: scale(0.98);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
